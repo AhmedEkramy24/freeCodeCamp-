@@ -15,7 +15,7 @@ export default function Navbar() {
       </nav>
       <div className="bg-slate-200 p-2">
         <div className="container">
-          <ul className="flex space-x-2">
+          <ul className="flex space-x-2 flex-wrap">
             <li>
               <NavLink
                 to={"accordian"}
@@ -30,6 +30,22 @@ export default function Navbar() {
                 className="text-slate-600 border-e-2 border-slate-500 px-2"
               >
                 Random Color Generator
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"starrating"}
+                className="text-slate-600 border-e-2 border-slate-500 px-2"
+              >
+                Star Rating
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"imagesslider"}
+                className="text-slate-600 border-e-2 border-slate-500 px-2"
+              >
+                Images Slider
               </NavLink>
             </li>
           </ul>

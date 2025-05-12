@@ -12,7 +12,7 @@ const CodeBlock = ({ code }) => {
   };
 
   return (
-    <div className="bg-gray-100 p-4 rounded-md relative">
+    <div className="bg-gray-200 p-4 rounded-md relative">
       <pre className="overflow-x-auto text-sm">
         <code>{codeText}</code>
       </pre>

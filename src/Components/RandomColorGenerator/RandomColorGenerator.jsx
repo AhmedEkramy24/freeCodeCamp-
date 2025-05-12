@@ -54,7 +54,7 @@ export default function RandomColorGenerator() {
 
   return (
     <>
-      <div className="container">
+      <div className="container p-2">
         <div className="btns flex justify-center space-x-2 my-3 p-2">
           <button
             onClick={() => setTypeOfColor("hex")}
