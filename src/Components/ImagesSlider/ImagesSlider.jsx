@@ -5,6 +5,7 @@ export default function ImagesSlider() {
   const [limit, setLimit] = useState(0);
   const [isSubmit, setIsSubmit] = useState(false);
   const [error, setError] = useState("");
+  const [apiError, setApiError] = useState("");
   const [images, setImages] = useState([]);
   const [turn, setTurn] = useState(0);
 
@@ -17,8 +18,9 @@ export default function ImagesSlider() {
         );
         setImages(data);
         setError("");
+        setApiError("");
       } catch (error) {
-        console.log(error);
+        setApiError("Error, you can try later ");
       } finally {
         setIsSubmit(false);
       }
@@ -93,7 +95,7 @@ export default function ImagesSlider() {
             </div>
           </div>
         ) : (
-          ""
+          apiError && <p className="text-red-500 font-bold">{apiError}</p>
         )}
       </div>
     </>
