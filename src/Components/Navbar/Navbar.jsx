@@ -48,6 +48,14 @@ export default function Navbar() {
                 Images Slider
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={"loadingmoreproducts"}
+                className="text-slate-600 border-e-2 border-slate-500 px-2"
+              >
+                Loading More Products
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

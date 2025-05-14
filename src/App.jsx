@@ -4,6 +4,7 @@ import Accordian from "./Components/Accordian/Accordian";
 import RandomColorGenerator from "./Components/RandomColorGenerator/RandomColorGenerator";
 import StarRating from "./Components/StarRating/StarRating";
 import ImagesSlider from "./Components/ImagesSlider/IMagesSlider";
+import LoadingMoreProducts from "./Components/LoadingMoreProducts/LoadingMoreProducts";
 
 const router = createHashRouter([
   {
@@ -25,6 +26,10 @@ const router = createHashRouter([
       {
         path: "imagesslider",
         element: <ImagesSlider />,
+      },
+      {
+        path: "loadingmoreproducts",
+        element: <LoadingMoreProducts />,
       },
     ],
   },
