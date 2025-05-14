@@ -56,6 +56,14 @@ export default function Navbar() {
                 Loading More Products
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={"treeveiw"}
+                className="text-slate-600 border-e-2 border-slate-500 px-2"
+              >
+                Tree Veiw
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
