@@ -5,7 +5,7 @@ import RandomColorGenerator from "./Components/RandomColorGenerator/RandomColorG
 import StarRating from "./Components/StarRating/StarRating";
 import ImagesSlider from "./Components/ImagesSlider/IMagesSlider";
 import LoadingMoreProducts from "./Components/LoadingMoreProducts/LoadingMoreProducts";
-import TreeVeiw from "./Components/TreeVeiw/TreeVeiw";
+import TreeVeiw from "./Components/TreeView/TreeView";
 
 const router = createHashRouter([
   {
