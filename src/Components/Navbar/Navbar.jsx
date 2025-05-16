@@ -64,6 +64,14 @@ export default function Navbar() {
                 Tree Veiw
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={"qrgenerator"}
+                className="text-slate-600 border-e-2 border-slate-500 px-2"
+              >
+                QR Generator
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

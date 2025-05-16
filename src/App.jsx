@@ -6,6 +6,7 @@ import StarRating from "./Components/StarRating/StarRating";
 import ImagesSlider from "./Components/ImagesSlider/IMagesSlider";
 import LoadingMoreProducts from "./Components/LoadingMoreProducts/LoadingMoreProducts";
 import TreeVeiw from "./Components/TreeView/TreeView";
+import QRGenerator from "./Components/QRGenerator/QRGenerator";
 
 const router = createHashRouter([
   {
@@ -35,6 +36,10 @@ const router = createHashRouter([
       {
         path: "treeveiw",
         element: <TreeVeiw />,
+      },
+      {
+        path: "qrgenerator",
+        element: <QRGenerator />,
       },
     ],
   },
