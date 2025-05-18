@@ -10,6 +10,7 @@ import QRGenerator from "./Components/QRGenerator/QRGenerator";
 import DarkModeNative from "./Components/DarkModeNative/DarkModeNative";
 import DarkModeTailwind from "./Components/DarkModeTailwind/DarkModeTailwind";
 import ScrollIndecator from "./Components/ScrollIndecator/ScrollIndecator";
+import NavAndTabs from "./Components/NavAndTabs/NavAndTabs";
 
 const router = createHashRouter([
   {
@@ -55,6 +56,10 @@ const router = createHashRouter([
       {
         path: "scrollindecators",
         element: <ScrollIndecator />,
+      },
+      {
+        path: "navandtabs",
+        element: <NavAndTabs />,
       },
     ],
   },
