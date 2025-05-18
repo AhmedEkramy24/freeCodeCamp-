@@ -1,5 +1,4 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import MenuItem from "./MenuItem";
 
 export default function Navbar() {
   return (
@@ -16,62 +15,14 @@ export default function Navbar() {
       <div className="bg-slate-200 p-2">
         <div className="container">
           <ul className="flex space-x-2 flex-wrap">
-            <li>
-              <NavLink
-                to={"accordian"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Accordian
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"randomcolorgenerator"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Random Color Generator
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"starrating"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Star Rating
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"imagesslider"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Images Slider
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"loadingmoreproducts"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Loading More Products
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"treeveiw"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                Tree Veiw
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={"qrgenerator"}
-                className="text-slate-600 border-e-2 border-slate-500 px-2"
-              >
-                QR Generator
-              </NavLink>
-            </li>
+            <MenuItem to={"accordian"} title={"Accordian"} />
+            <MenuItem to={"randomcolorgenerator"} title={"Random Color Generator"} />
+            <MenuItem to={"starrating"} title={"Star Rating"} />
+            <MenuItem to={"imagesslider"} title={"Images Slider"} />
+            <MenuItem to={"loadingmoreproducts"} title={"Loading More Products"} />
+            <MenuItem to={"treeveiw"} title={"Tree Veiw"} />
+            <MenuItem to={"qrgenerator"} title={"QR Generator"} />  
+            <MenuItem to={"darkmodenative"} title={"Dark Mode Native"} />  
           </ul>
         </div>
       </div>

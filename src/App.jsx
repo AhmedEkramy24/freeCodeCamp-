@@ -7,6 +7,7 @@ import ImagesSlider from "./Components/ImagesSlider/IMagesSlider";
 import LoadingMoreProducts from "./Components/LoadingMoreProducts/LoadingMoreProducts";
 import TreeVeiw from "./Components/TreeView/TreeView";
 import QRGenerator from "./Components/QRGenerator/QRGenerator";
+import DarkModeNative from "./Components/DarkModeNative/DarkModeNative";
 
 const router = createHashRouter([
   {
@@ -40,6 +41,10 @@ const router = createHashRouter([
       {
         path: "qrgenerator",
         element: <QRGenerator />,
+      },
+      {
+        path: "darkmodenative",
+        element: <DarkModeNative />,
       },
     ],
   },

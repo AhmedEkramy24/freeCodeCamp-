@@ -1,0 +1,30 @@
+:root {
+  --bg: #fff;
+  --text-color: #000;
+  --border-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg: #000;
+  --text-color: #fff;
+  --border-color: #fff;
+}
+
+* {
+  transition: 0.3s;
+}
+
+.parent {
+  background-color: var(--bg);
+  height: 100vh;
+}
+
+.title,
+.btn {
+  color: var(--text-color);
+  background: var(--bg);
+}
+
+.btn {
+  border: solid 1px var(--border-color);
+}

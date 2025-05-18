@@ -8,6 +8,9 @@ export default function QRGenerator() {
   return (
     <>
       <div className="container">
+        <h1 className="text-3xl text-center text-gray-800 my-3">
+          QR code generator
+        </h1>
         <div className="form flex justify-center gap-2 p-2 flex-wrap">
           <input
             className=" border border-slate-400 rounded-md focus:outline-none px-2 py-1"
