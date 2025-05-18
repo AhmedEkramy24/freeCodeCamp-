@@ -26,6 +26,7 @@ export default function Navbar() {
             <MenuItem to={"darkmodetailwind"} title={"Dark Mode Tailwind"} />  
             <MenuItem to={"scrollindecators"} title={"Scroll Indecator"} />  
             <MenuItem to={"navandtabs"} title={"Nav And Tabs"} />  
+            <MenuItem to={"openmodal"} title={"Open Modal"} />  
           </ul>
         </div>
       </div>

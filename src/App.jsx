@@ -11,6 +11,7 @@ import DarkModeNative from "./Components/DarkModeNative/DarkModeNative";
 import DarkModeTailwind from "./Components/DarkModeTailwind/DarkModeTailwind";
 import ScrollIndecator from "./Components/ScrollIndecator/ScrollIndecator";
 import NavAndTabs from "./Components/NavAndTabs/NavAndTabs";
+import OpenModal from "./Components/OpenModal/OpenModal";
 
 const router = createHashRouter([
   {
@@ -60,6 +61,10 @@ const router = createHashRouter([
       {
         path: "navandtabs",
         element: <NavAndTabs />,
+      },
+      {
+        path: "openmodal",
+        element: <OpenModal />,
       },
     ],
   },
