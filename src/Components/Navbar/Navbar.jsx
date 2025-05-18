@@ -23,6 +23,8 @@ export default function Navbar() {
             <MenuItem to={"treeveiw"} title={"Tree Veiw"} />
             <MenuItem to={"qrgenerator"} title={"QR Generator"} />  
             <MenuItem to={"darkmodenative"} title={"Dark Mode Native"} />  
+            <MenuItem to={"darkmodetailwind"} title={"Dark Mode Tailwind"} />  
+            <MenuItem to={"scrollindecators"} title={"Scroll Indecator"} />  
           </ul>
         </div>
       </div>

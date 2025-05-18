@@ -11,7 +11,7 @@ export default function DarkModeNative() {
   return (
     <>
       <div data-theme={theme} className="parent">
-        <div className="container">
+        <div className="container p-3">
           <h1 data-theme={theme} className="title text-3xl w-fit mx-auto ">
             Hello World !
           </h1>

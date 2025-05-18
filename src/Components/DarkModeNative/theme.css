@@ -10,9 +10,9 @@
   --border-color: #fff;
 }
 
-* {
+/* {
   transition: 0.3s;
-}
+} */
 
 .parent {
   background-color: var(--bg);

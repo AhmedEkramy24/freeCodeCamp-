@@ -8,6 +8,8 @@ import LoadingMoreProducts from "./Components/LoadingMoreProducts/LoadingMorePro
 import TreeVeiw from "./Components/TreeView/TreeView";
 import QRGenerator from "./Components/QRGenerator/QRGenerator";
 import DarkModeNative from "./Components/DarkModeNative/DarkModeNative";
+import DarkModeTailwind from "./Components/DarkModeTailwind/DarkModeTailwind";
+import ScrollIndecator from "./Components/ScrollIndecator/ScrollIndecator";
 
 const router = createHashRouter([
   {
@@ -45,6 +47,14 @@ const router = createHashRouter([
       {
         path: "darkmodenative",
         element: <DarkModeNative />,
+      },
+      {
+        path: "darkmodetailwind",
+        element: <DarkModeTailwind />,
+      },
+      {
+        path: "scrollindecators",
+        element: <ScrollIndecator />,
       },
     ],
   },
