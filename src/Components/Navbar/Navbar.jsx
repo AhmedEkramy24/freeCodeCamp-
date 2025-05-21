@@ -27,6 +27,7 @@ export default function Navbar() {
             <MenuItem to={"scrollindecators"} title={"Scroll Indecator"} />  
             <MenuItem to={"navandtabs"} title={"Nav And Tabs"} />  
             <MenuItem to={"openmodal"} title={"Open Modal"} />  
+            <MenuItem to={"githubprofilefinder"} title={"Github Profile Finder"} />  
           </ul>
         </div>
       </div>

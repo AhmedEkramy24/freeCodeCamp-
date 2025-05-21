@@ -12,6 +12,7 @@ import DarkModeTailwind from "./Components/DarkModeTailwind/DarkModeTailwind";
 import ScrollIndecator from "./Components/ScrollIndecator/ScrollIndecator";
 import NavAndTabs from "./Components/NavAndTabs/NavAndTabs";
 import OpenModal from "./Components/OpenModal/OpenModal";
+import GithubProfileFinder from "./Components/GithubProfileFinder/GithubProfileFinder";
 
 const router = createHashRouter([
   {
@@ -65,6 +66,10 @@ const router = createHashRouter([
       {
         path: "openmodal",
         element: <OpenModal />,
+      },
+      {
+        path: "githubprofilefinder",
+        element: <GithubProfileFinder />,
       },
     ],
   },
