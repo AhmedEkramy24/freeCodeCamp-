@@ -13,6 +13,7 @@ import ScrollIndecator from "./Components/ScrollIndecator/ScrollIndecator";
 import NavAndTabs from "./Components/NavAndTabs/NavAndTabs";
 import OpenModal from "./Components/OpenModal/OpenModal";
 import GithubProfileFinder from "./Components/GithubProfileFinder/GithubProfileFinder";
+import Repos from "./Components/GithubProfileFinder/Repos";
 
 const router = createHashRouter([
   {
@@ -70,6 +71,10 @@ const router = createHashRouter([
       {
         path: "githubprofilefinder",
         element: <GithubProfileFinder />,
+      },
+      {
+        path: "repositories/:username",
+        element: <Repos />,
       },
     ],
   },

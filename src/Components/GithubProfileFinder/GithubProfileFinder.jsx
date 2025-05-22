@@ -1,22 +1,25 @@
+import axios from "axios";
+import { useState } from "react";
+import displayDate from "./displayDate";
+import { Link } from "react-router-dom";
+
 export default function GithubProfileFinder() {
   const [user, setUser] = useState("AhmedEkramy24");
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [userData, setUserData] = useState({});
+  const [error, setError] = useState(null);
+  const [userData, setUserData] = useState(null);
 
   async function fetchUserData() {
     try {
       let { data } = await axios.get(`https://api.github.com/users/${user}`);
       setUserData(data);
-      console.log(data);
-    } catch (error) {}
+      setError(null);
+    } catch (error) {
+      setError("User not found");
+      setUserData(null);
+    }
   }
 
-  useEffect(() => {
-    fetchUserData();
-  }, [user]);
- 
   return (
     <>
       <div className="container p-2">
@@ -26,20 +29,70 @@ export default function GithubProfileFinder() {
             type="text"
             placeholder="Enter Github Username"
             className="border border-gray-300 px-3 py-1 rounded w-50"
+            onChange={(e) => setUser(e.target.value)}
+            value={user}
           />
-          <button className="bg-gray-800 text-white px-3 py-1 rounded ml-2">
+          <button
+            onClick={fetchUserData}
+            className="bg-gray-800 text-white px-3 py-1 rounded ml-2"
+          >
             Search
           </button>
         </div>
         <div className="mt-4 border border-gray-300 p-4 rounded md:w-1/2 mx-auto">
-          <div className="img size-[200px] rounded-full bg-amber-100 mx-auto">
-            <img src="" alt="" />
-          </div>
-          <div className="info">
-            <p>
-              <span className="font-bold">Name : </span>
-            </p>
-          </div>
+          {error && (
+            <p className="text-red-500 text-center font-semibold">{error}</p>
+          )}
+          {userData && (
+            <>
+              <div className="img size-[150px] rounded-full overflow-hidden bg-amber-100 mx-auto">
+                <img
+                  src={userData.avatar_url}
+                  className="w-full object-cover"
+                  alt={userData.login}
+                />
+              </div>
+              <div className="info mt-3 relative">
+                <p>
+                  <span className="font-bold">Name : </span>
+                  <a href={userData.html_url} target="_blank">
+                    <span className="text-blue-500 underline font-semibold">
+                      {userData.name}
+                    </span>
+                  </a>
+                </p>
+                <p>
+                  <span className="font-bold">Joined At : </span>
+                  <span className="font-semibold">
+                    {displayDate(userData.created_at)}
+                  </span>
+                </p>
+                <p>
+                  <span className="font-bold">Public Repositories: </span>
+                  <span className="font-semibold text-blue-500">
+                    {userData.public_repos}
+                  </span>
+                </p>
+                <p>
+                  <span className="font-bold">Followers: </span>
+                  <span className="font-semibold text-blue-500">
+                    {userData.followers}
+                  </span>
+                </p>
+                <p>
+                  <span className="font-bold">Following: </span>
+                  <span className="font-semibold text-blue-500">
+                    {userData.following}
+                  </span>
+                </p>
+                <Link to={`/repositories/${userData.login}`} className="absolute bottom-1 right-1">
+                  <button className="bg-gray-800 text-white px-3 py-1 rounded ">
+                    Show Repos
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
