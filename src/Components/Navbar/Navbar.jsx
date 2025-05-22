@@ -28,6 +28,7 @@ export default function Navbar() {
             <MenuItem to={"navandtabs"} title={"Nav And Tabs"} />  
             <MenuItem to={"openmodal"} title={"Open Modal"} />  
             <MenuItem to={"githubprofilefinder"} title={"Github Profile Finder"} />  
+            <MenuItem to={"searchinusers"} title={"Search In Users"} />  
           </ul>
         </div>
       </div>

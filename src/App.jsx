@@ -14,6 +14,7 @@ import NavAndTabs from "./Components/NavAndTabs/NavAndTabs";
 import OpenModal from "./Components/OpenModal/OpenModal";
 import GithubProfileFinder from "./Components/GithubProfileFinder/GithubProfileFinder";
 import Repos from "./Components/GithubProfileFinder/Repos";
+import SearchInUsers from "./Components/SearchInUsers/SearchInUsers";
 
 const router = createHashRouter([
   {
@@ -75,6 +76,10 @@ const router = createHashRouter([
       {
         path: "repositories/:username",
         element: <Repos />,
+      },
+      {
+        path: "searchinusers",
+        element: <SearchInUsers />,
       },
     ],
   },
