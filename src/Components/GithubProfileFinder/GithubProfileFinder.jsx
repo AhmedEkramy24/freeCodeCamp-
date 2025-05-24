@@ -8,8 +8,10 @@ export default function GithubProfileFinder() {
 
   const [error, setError] = useState(null);
   const [userData, setUserData] = useState(null);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   async function fetchUserData() {
+    setIsSubmit(true);
     try {
       let { data } = await axios.get(`https://api.github.com/users/${user}`);
       setUserData(data);
@@ -17,6 +19,8 @@ export default function GithubProfileFinder() {
     } catch (error) {
       setError("User not found");
       setUserData(null);
+    } finally {
+      setIsSubmit(false);
     }
   }
 
@@ -32,12 +36,18 @@ export default function GithubProfileFinder() {
             onChange={(e) => setUser(e.target.value)}
             value={user}
           />
-          <button
-            onClick={fetchUserData}
-            className="bg-gray-800 text-white px-3 py-1 rounded ml-2"
-          >
-            Search
-          </button>
+          {isSubmit ? (
+            <button className="bg-gray-800 text-white px-3 py-1 rounded ml-2">
+              <i className="fas fa-spinner fa-spin"></i>
+            </button>
+          ) : (
+            <button
+              onClick={fetchUserData}
+              className="bg-gray-800 text-white px-3 py-1 rounded ml-2"
+            >
+              Search
+            </button>
+          )}
         </div>
         <div className="mt-4 border border-gray-300 p-4 rounded md:w-1/2 mx-auto">
           {error && (
@@ -85,7 +95,10 @@ export default function GithubProfileFinder() {
                     {userData.following}
                   </span>
                 </p>
-                <Link to={`/repositories/${userData.login}`} className="absolute bottom-1 right-1">
+                <Link
+                  to={`/repositories/${userData.login}`}
+                  className="absolute bottom-1 right-1"
+                >
                   <button className="bg-gray-800 text-white px-3 py-1 rounded ">
                     Show Repos
                   </button>
