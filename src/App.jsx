@@ -15,6 +15,7 @@ import OpenModal from "./Components/OpenModal/OpenModal";
 import GithubProfileFinder from "./Components/GithubProfileFinder/GithubProfileFinder";
 import Repos from "./Components/GithubProfileFinder/Repos";
 import SearchInUsers from "./Components/SearchInUsers/SearchInUsers";
+import XOGame from "./Components/XOGame/XOGame";
 
 const router = createHashRouter([
   {
@@ -80,6 +81,10 @@ const router = createHashRouter([
       {
         path: "searchinusers",
         element: <SearchInUsers />,
+      },
+      {
+        path: "xogame",
+        element: <XOGame />,
       },
     ],
   },
